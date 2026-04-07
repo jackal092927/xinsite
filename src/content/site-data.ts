@@ -1,9 +1,9 @@
 export const profile = {
   name: "Cheng Xin",
   shortName: "Xin",
-  tagline: "I build AI agents, intelligent systems, and the product-grade infrastructure around them.",
+  tagline: "I turn AI research into working systems.",
   subtagline:
-    "AI engineer / agent builder with a startup-generalist bias. I like turning fuzzy ideas into working systems that people can actually use.",
+    "AI/ML researcher, agent builder, and startup funding engineer focused on turning fuzzy ideas into useful products, technical leverage, and real execution.",
   location: "New Jersey, USA",
   email: "cx122@rutgers.edu",
   github: "https://github.com/jackal092927",

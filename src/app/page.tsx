@@ -126,8 +126,8 @@ export default function Home() {
             <div className="space-y-20 pb-24">
               {/* Hero */}
               <section className="pt-8 sm:pt-16">
-                <div className="inline-flex rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3 py-1 text-xs tracking-[0.18em] text-indigo-200 uppercase">
-                  AI engineer · agent builder · startup generalist
+                <div className="inline-flex rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3 py-1 text-xs tracking-[0.12em] text-indigo-200">
+                  AI/ML Researcher, Agent Builder, Startup Funding Engineer
                 </div>
                 <h1 className="mt-6 max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-6xl sm:leading-[1.05]">
                   {profile.tagline}
@@ -172,7 +172,7 @@ export default function Home() {
                       ],
                       [
                         "Current mode",
-                        "Transitioning toward industry-facing builder positioning",
+                        "Positioning for industry, startup, and builder-facing opportunities",
                       ],
                     ] as const
                   ).map(([label, value]) => (
