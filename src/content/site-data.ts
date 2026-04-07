@@ -13,6 +13,7 @@ export const profile = {
 
 export const featuredProjects = [
   {
+    slug: "agent-systems-openclaw",
     title: "Agent Systems & OpenClaw Workflows",
     tag: "Agents · Systems · Tooling",
     signals: ["Open Source", "Production-minded", "AI agents"],
@@ -27,12 +28,37 @@ export const featuredProjects = [
       "Explored coding-agent loops, subagent coordination, and more observable agent behavior.",
       "Focus: move from 'LLM demo' to durable product behavior with real operational constraints.",
     ],
+    caseStudy: {
+      summary:
+        "A running body of work around making AI assistants more durable, inspectable, and operationally useful once they leave the playground stage.",
+      situation:
+        "The gap between model capability and product reliability is still huge. In practice, assistants fail on tool selection, memory use, long tasks, and traceability even when the base model looks impressive in isolation.",
+      constraints: [
+        "Agent behavior has to remain understandable enough to debug.",
+        "Long-horizon tasks create memory and coordination pressure fast.",
+        "Real workflows need structure, not just clever prompting.",
+      ],
+      approach: [
+        "Explored workflow patterns for tool orchestration, structured execution, and task decomposition.",
+        "Worked on memory-routing and context-handling ideas so assistants can stay coherent on longer jobs.",
+        "Pushed toward coding-agent loops and subagent coordination patterns that feel closer to real systems than demos.",
+      ],
+      outcomes: [
+        "Sharper intuition for where agent systems break under real usage pressure.",
+        "A stronger design bias toward observability, explicit structure, and reliable execution surfaces.",
+        "A portfolio narrative that connects research-minded rigor with practical AI product building.",
+      ],
+      relevance:
+        "This is highly relevant to startups and product teams building agentic systems, internal copilots, or AI-heavy automation where reliability matters more than vibe.",
+    },
     links: [
+      { label: "Case study", href: "/work/agent-systems-openclaw", kind: "Case Study" },
       { label: "GitHub", href: "https://github.com/openclaw/openclaw", kind: "Code" },
       { label: "Research archive", href: "/research", kind: "Archive" },
     ],
   },
   {
+    slug: "toping",
     title: "TopInG",
     tag: "ML · Graph Learning · Interpretability",
     signals: ["ICML 2025", "Research", "Interpretability"],
@@ -47,12 +73,37 @@ export const featuredProjects = [
       "Improved stability and interpretability under spurious-correlation pressure.",
       "Accepted to ICML 2025.",
     ],
+    caseStudy: {
+      summary:
+        "A research project aimed at making graph-learning models easier to trust by grounding explanations in topological structure rather than fragile post-hoc stories.",
+      situation:
+        "In many ML settings, explanation methods are unstable: they shift under noise, latch onto shortcuts, or look convincing without actually reflecting the model's decision process.",
+      constraints: [
+        "Interpretability has to be more than a visualization gimmick.",
+        "Rationales should remain stable under perturbation.",
+        "The method has to stay rigorous enough for serious ML evaluation.",
+      ],
+      approach: [
+        "Used persistent homology to define stable rationale structure in graph-learning settings.",
+        "Built the framework around topological discrepancy so explanation quality could be evaluated more principledly.",
+        "Positioned the work around the practical trust question: is the model right for the right reason?",
+      ],
+      outcomes: [
+        "Accepted to ICML 2025.",
+        "Created a sharper bridge between theoretical structure and model-behavior diagnosis.",
+        "Strengthened a research identity around trustworthy and interpretable ML.",
+      ],
+      relevance:
+        "For industry teams working on safety, evaluation, regulated ML, or high-stakes inference, this project signals depth in interpretability that goes beyond surface-level explainability slogans.",
+    },
     links: [
+      { label: "Case study", href: "/work/toping", kind: "Case Study" },
       { label: "Paper", href: "https://openreview.net/pdf?id=u4LlYWJHUF", kind: "Paper" },
       { label: "Research archive", href: "/research", kind: "Archive" },
     ],
   },
   {
+    slug: "neuc-mds",
     title: "Neuc-MDS",
     tag: "Geometry · ML Theory · Representation",
     signals: ["NeurIPS 2024", "Theory", "Representation"],
@@ -67,12 +118,37 @@ export const featuredProjects = [
       "Converted difficult geometric structure into usable signal rather than wasted residue.",
       "Presented at NeurIPS 2024.",
     ],
+    caseStudy: {
+      summary:
+        "A theory-heavy project on recovering usable representation power from geometric settings that standard Euclidean assumptions mishandle.",
+      situation:
+        "A lot of classical representation tools quietly assume geometry behaves in friendly Euclidean ways. Once that assumption breaks, useful information often gets discarded rather than reinterpreted.",
+      constraints: [
+        "The math has to stay rigorous while addressing a genuinely awkward setting.",
+        "The result should not just be a theoretical curiosity.",
+        "Negative-eigenvalue structure needs a principled treatment, not hand-waving.",
+      ],
+      approach: [
+        "Generalized MDS using symmetric bilinear forms for non-Euclidean and non-metric inputs.",
+        "Reframed previously troublesome structure as signal that can still support learning and representation.",
+        "Pushed the work toward a clearer ML-facing interpretation rather than leaving it as pure abstraction.",
+      ],
+      outcomes: [
+        "Presented at NeurIPS 2024.",
+        "Expanded the conceptual toolkit for handling difficult geometric data.",
+        "Demonstrated strength in technical abstraction with downstream ML relevance.",
+      ],
+      relevance:
+        "This kind of project matters when teams need people who can work comfortably across theory, representation, and the translation layer between difficult mathematics and usable ML ideas.",
+    },
     links: [
+      { label: "Case study", href: "/work/neuc-mds", kind: "Case Study" },
       { label: "Paper", href: "http://jackal092927.github.io/files/neucmds.pdf", kind: "Paper" },
       { label: "Research archive", href: "/research", kind: "Archive" },
     ],
   },
   {
+    slug: "dl3dv-10k",
     title: "DL3DV-10K",
     tag: "3D Vision · Data · Benchmarking",
     signals: ["CVPR 2024", "51.2M frames", "Dataset"],
@@ -87,12 +163,40 @@ export const featuredProjects = [
       "Supports benchmarking for NeRF, reconstruction, and broader 3D scene understanding workflows.",
       "Published at CVPR 2024.",
     ],
+    caseStudy: {
+      summary:
+        "A large-scale dataset and benchmark effort designed to make 3D vision evaluation look more like reality and less like a sanitized toy setting.",
+      situation:
+        "Strong 3D learning systems need data scale, messy real-world coverage, and benchmarks that reflect how modern pipelines are actually used. Many existing datasets fall short on one or more of those dimensions.",
+      constraints: [
+        "The dataset had to be large enough to matter.",
+        "It needed to support contemporary 3D workflows, not outdated benchmark assumptions.",
+        "Benchmark design had to balance practicality with research value.",
+      ],
+      approach: [
+        "Contributed to building a large-scale dataset centered on real-world scene capture and evaluation needs.",
+        "Positioned it to support reconstruction, NeRF, and broader 3D scene-understanding tasks.",
+        "Framed the work as shared infrastructure: something other researchers and builders can rely on.",
+      ],
+      outcomes: [
+        "51.2M frames across 10,510 videos.",
+        "Published at CVPR 2024.",
+        "Created a benchmark surface with more realistic scale and practical relevance for deep 3D systems.",
+      ],
+      relevance:
+        "For companies working in embodied AI, robotics, 3D perception, simulation, or vision infrastructure, this shows comfort with data scale, benchmark thinking, and research infrastructure work.",
+    },
     links: [
+      { label: "Case study", href: "/work/dl3dv-10k", kind: "Case Study" },
       { label: "Paper", href: "http://jackal092927.github.io/files/DL3DV-10K_CVPR2024.pdf", kind: "Paper" },
       { label: "Research archive", href: "/research", kind: "Archive" },
     ],
   },
 ];
+
+export function getFeaturedProjectBySlug(slug: string) {
+  return featuredProjects.find((project) => project.slug === slug);
+}
 
 export const skillGroups = [
   {
