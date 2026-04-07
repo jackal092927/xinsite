@@ -258,6 +258,18 @@ export default function Home() {
                             {project.tag}
                           </p>
                         </div>
+                        {project.signals ? (
+                          <div className="flex flex-wrap gap-2">
+                            {project.signals.map((signal) => (
+                              <span
+                                key={signal}
+                                className="rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-indigo-100"
+                              >
+                                {signal}
+                              </span>
+                            ))}
+                          </div>
+                        ) : null}
                       </div>
 
                       <div className="mt-6 grid gap-4 md:grid-cols-3">
@@ -307,10 +319,11 @@ export default function Home() {
                             const isInternal = link.href.startsWith("/");
                             const className =
                               "rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-zinc-200 transition hover:border-indigo-400/30 hover:bg-white/4";
+                            const text = link.kind ? `${link.kind} · ${link.label}` : link.label;
 
                             return isInternal ? (
                               <Link key={link.label} href={link.href} className={className}>
-                                {link.label}
+                                {text}
                               </Link>
                             ) : (
                               <a
@@ -320,7 +333,7 @@ export default function Home() {
                                 rel="noreferrer"
                                 className={className}
                               >
-                                {link.label}
+                                {text}
                               </a>
                             );
                           })}

@@ -15,6 +15,7 @@ export const featuredProjects = [
   {
     title: "Agent Systems & OpenClaw Workflows",
     tag: "Agents · Systems · Tooling",
+    signals: ["Open Source", "Production-minded", "AI agents"],
     problem:
       "Most AI assistants are still fragile demos: weak tool orchestration, poor memory behavior, low observability, and not enough structure to survive real usage.",
     built:
@@ -27,13 +28,14 @@ export const featuredProjects = [
       "Focus: move from 'LLM demo' to durable product behavior with real operational constraints.",
     ],
     links: [
-      { label: "GitHub", href: "https://github.com/openclaw/openclaw" },
-      { label: "Research archive", href: "/research" },
+      { label: "GitHub", href: "https://github.com/openclaw/openclaw", kind: "Code" },
+      { label: "Research archive", href: "/research", kind: "Archive" },
     ],
   },
   {
     title: "TopInG",
     tag: "ML · Graph Learning · Interpretability",
+    signals: ["ICML 2025", "Research", "Interpretability"],
     problem:
       "A model can look accurate while relying on the wrong signals. For high-stakes use, explanation quality and rationale stability matter almost as much as raw accuracy.",
     built:
@@ -46,13 +48,14 @@ export const featuredProjects = [
       "Accepted to ICML 2025.",
     ],
     links: [
-      { label: "Paper", href: "https://openreview.net/pdf?id=u4LlYWJHUF" },
-      { label: "Research archive", href: "/research" },
+      { label: "Paper", href: "https://openreview.net/pdf?id=u4LlYWJHUF", kind: "Paper" },
+      { label: "Research archive", href: "/research", kind: "Archive" },
     ],
   },
   {
     title: "Neuc-MDS",
     tag: "Geometry · ML Theory · Representation",
+    signals: ["NeurIPS 2024", "Theory", "Representation"],
     problem:
       "Classical dimensionality reduction throws away useful structure when the data geometry stops behaving nicely in Euclidean terms.",
     built:
@@ -65,13 +68,14 @@ export const featuredProjects = [
       "Presented at NeurIPS 2024.",
     ],
     links: [
-      { label: "Paper", href: "http://jackal092927.github.io/files/neucmds.pdf" },
-      { label: "Research archive", href: "/research" },
+      { label: "Paper", href: "http://jackal092927.github.io/files/neucmds.pdf", kind: "Paper" },
+      { label: "Research archive", href: "/research", kind: "Archive" },
     ],
   },
   {
     title: "DL3DV-10K",
     tag: "3D Vision · Data · Benchmarking",
+    signals: ["CVPR 2024", "51.2M frames", "Dataset"],
     problem:
       "Modern 3D vision systems need scale and realism, but many benchmarks are too small, too clean, or too detached from how deep-learning pipelines are actually used.",
     built:
@@ -84,8 +88,8 @@ export const featuredProjects = [
       "Published at CVPR 2024.",
     ],
     links: [
-      { label: "Paper", href: "http://jackal092927.github.io/files/DL3DV-10K_CVPR2024.pdf" },
-      { label: "Research archive", href: "/research" },
+      { label: "Paper", href: "http://jackal092927.github.io/files/DL3DV-10K_CVPR2024.pdf", kind: "Paper" },
+      { label: "Research archive", href: "/research", kind: "Archive" },
     ],
   },
 ];
