@@ -192,7 +192,7 @@ export default function Home() {
               <SectionShell
                 id="work"
                 eyebrow="Selected work"
-                title="Projects that show how I think and build"
+                title="Projects that show technical depth and builder instinct"
               >
                 <div className="grid gap-5">
                   {featuredProjects.map((project) => (
@@ -256,7 +256,7 @@ export default function Home() {
               <SectionShell
                 id="experience"
                 eyebrow="Experience"
-                title="Research depth, builder instincts, strong technical range"
+                title="A research background shaped for high-agency technical work"
               >
                 <div className="space-y-4">
                   {experiences.map((item) => (

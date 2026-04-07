@@ -15,21 +15,21 @@ export const featuredProjects = [
     title: "Agent Systems & OpenClaw Workflows",
     tag: "Agents · Systems · Tooling",
     summary:
-      "Building and studying agentic workflows, orchestration patterns, memory systems, coding-agent loops, and evaluation methods for real-world AI assistants.",
+      "Designed and iterated on agent workflows, memory routing, and execution patterns for real AI assistants that need to do more than generate text.",
     bullets: [
-      "Worked on agent orchestration, long-context workflows, memory routing, and structured task execution.",
-      "Explored coding-agent patterns, subagent coordination, and evaluation over session logs.",
-      "Interested in bridging research ideas with usable AI infrastructure.",
+      "Worked on orchestration patterns for tool use, long-context handling, task decomposition, and structured execution.",
+      "Explored coding-agent loops, subagent coordination, and ways to make agent behavior more observable and debuggable.",
+      "Focus: move from 'LLM demo' to durable product behavior with real operational constraints.",
     ],
   },
   {
     title: "TopInG",
     tag: "ML · Graph Learning · Interpretability",
     summary:
-      "A topologically interpretable graph learning framework that uses persistent rationale filtration to identify stable rationale subgraphs.",
+      "Built an interpretable graph learning framework that makes model rationales more stable, inspectable, and resistant to spurious shortcuts.",
     bullets: [
-      "Built a principled framework for interpretable GNNs with topological discrepancy constraints.",
-      "Focused on explanation quality, rationale discovery, and robustness to spurious correlations.",
+      "Combined graph learning with persistent homology to identify stable rationale subgraphs instead of brittle post-hoc explanations.",
+      "Targeted a problem industry teams actually care about: when a model looks right, is it right for the right reason?",
       "Accepted to ICML 2025.",
     ],
   },
@@ -37,10 +37,10 @@ export const featuredProjects = [
     title: "Neuc-MDS",
     tag: "Geometry · ML Theory · Representation",
     summary:
-      "Generalized classical MDS to non-Euclidean settings using bilinear forms so information in negative eigenvalues becomes useful rather than discarded.",
+      "Reworked multidimensional scaling beyond Euclidean assumptions so difficult geometric structure can still be used instead of thrown away.",
     bullets: [
-      "Extended dimensionality reduction beyond Euclidean assumptions.",
-      "Connected mathematical structure with practical embedding performance.",
+      "Generalized classical MDS with bilinear-form machinery for non-Euclidean and non-metric settings.",
+      "Turned a mathematically awkward case—negative eigenvalue information—into something usable for representation learning.",
       "Presented at NeurIPS 2024.",
     ],
   },
@@ -48,10 +48,10 @@ export const featuredProjects = [
     title: "DL3DV-10K",
     tag: "3D Vision · Data · Benchmarking",
     summary:
-      "Contributed to a large-scale real-world 3D vision dataset and benchmark for modern deep learning-based 3D scene understanding.",
+      "Helped build a large-scale 3D vision dataset and benchmark designed for modern deep-learning pipelines, not toy academic setups.",
     bullets: [
-      "Large-scale scene dataset with 51.2M frames across 10,510 videos.",
-      "Supports benchmarking for NeRF and related 3D vision systems.",
+      "Dataset scale: 51.2M frames across 10,510 real-world videos.",
+      "Supports benchmarking for NeRF, reconstruction, and broader 3D scene understanding workflows.",
       "Published at CVPR 2024.",
     ],
   },
@@ -82,21 +82,21 @@ export const experiences = [
     org: "Rutgers University",
     period: "Current",
     description:
-      "Researching geometric and topological methods for trustworthy machine learning, with increasing focus on connecting deep ML ideas to useful AI systems.",
+      "Lead technically deep work across topological learning, trustworthy ML, and research-to-system translation. Increasingly focused on turning research judgment into usable AI tooling, agentic systems, and product-shaping technical direction.",
   },
   {
     role: "Ph.D. in Computer Science",
     org: "Purdue University",
     period: "Completed",
     description:
-      "Worked on topological data analysis, multiparameter persistent homology, algorithms, and mathematical foundations for modern machine learning.",
+      "Built strong mathematical and algorithmic depth in topology, geometry, and machine learning foundations—training that now shows up as unusually high leverage on hard model, representation, and system-design problems.",
   },
   {
     role: "Lecturer",
     org: "Rutgers University",
     period: "Selected",
     description:
-      "Taught graduate algorithms and communicated complex technical material with rigor and clarity.",
+      "Owned end-to-end delivery of graduate algorithms instruction: structure, explanation, pacing, and technical communication. Good preparation for cross-functional environments where clarity matters as much as correctness.",
   },
 ];
 
