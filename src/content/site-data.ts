@@ -8,6 +8,7 @@ export const profile = {
   email: "cx122@rutgers.edu",
   github: "https://github.com/jackal092927",
   linkedin: "https://www.linkedin.com/in/jackalxin/",
+  resume: "/resume/cheng-xin-resume-agent-dev-2026-04-07.pdf",
 };
 
 export const featuredProjects = [
@@ -21,6 +22,10 @@ export const featuredProjects = [
       "Explored coding-agent loops, subagent coordination, and ways to make agent behavior more observable and debuggable.",
       "Focus: move from 'LLM demo' to durable product behavior with real operational constraints.",
     ],
+    links: [
+      { label: "GitHub", href: "https://github.com/openclaw/openclaw" },
+      { label: "Research archive", href: "/research" },
+    ],
   },
   {
     title: "TopInG",
@@ -31,6 +36,10 @@ export const featuredProjects = [
       "Combined graph learning with persistent homology to identify stable rationale subgraphs instead of brittle post-hoc explanations.",
       "Targeted a problem industry teams actually care about: when a model looks right, is it right for the right reason?",
       "Accepted to ICML 2025.",
+    ],
+    links: [
+      { label: "Paper", href: "https://openreview.net/pdf?id=u4LlYWJHUF" },
+      { label: "Research archive", href: "/research" },
     ],
   },
   {
@@ -43,6 +52,10 @@ export const featuredProjects = [
       "Turned a mathematically awkward case—negative eigenvalue information—into something usable for representation learning.",
       "Presented at NeurIPS 2024.",
     ],
+    links: [
+      { label: "Paper", href: "http://jackal092927.github.io/files/neucmds.pdf" },
+      { label: "Research archive", href: "/research" },
+    ],
   },
   {
     title: "DL3DV-10K",
@@ -53,6 +66,10 @@ export const featuredProjects = [
       "Dataset scale: 51.2M frames across 10,510 real-world videos.",
       "Supports benchmarking for NeRF, reconstruction, and broader 3D scene understanding workflows.",
       "Published at CVPR 2024.",
+    ],
+    links: [
+      { label: "Paper", href: "http://jackal092927.github.io/files/DL3DV-10K_CVPR2024.pdf" },
+      { label: "Research archive", href: "/research" },
     ],
   },
 ];

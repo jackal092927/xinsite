@@ -142,6 +142,14 @@ export default function Home() {
                   >
                     View selected work
                   </a>
+                  <a
+                    href={profile.resume}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full border border-white/10 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-indigo-400/30 hover:bg-white/4"
+                  >
+                    Resume PDF
+                  </a>
                   <Link
                     href="/research"
                     className="rounded-full border border-white/10 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-indigo-400/30 hover:bg-white/4"
@@ -156,6 +164,47 @@ export default function Home() {
                   >
                     GitHub
                   </a>
+                </div>
+
+                <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                  {(
+                    [
+                      ["Resume", "Current industry-facing PDF ready to send", profile.resume],
+                      ["GitHub", "Code, repos, and technical footprint", profile.github],
+                      ["LinkedIn", "Recruiter-friendly profile surface", profile.linkedin],
+                      ["Research", "Papers, academic work, and teaching archive", "/research"],
+                    ] as const
+                  ).map(([label, value, href]) => {
+                    const isInternal = href.startsWith("/");
+                    const className =
+                      "glass rounded-2xl p-4 transition hover:border-indigo-400/30 hover:bg-white/5";
+
+                    return isInternal ? (
+                      <Link key={label} href={href} className={className}>
+                        <div className="text-xs uppercase tracking-[0.18em] text-zinc-500">
+                          {label}
+                        </div>
+                        <div className="mt-3 text-sm leading-6 text-zinc-200">
+                          {value}
+                        </div>
+                      </Link>
+                    ) : (
+                      <a
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={className}
+                      >
+                        <div className="text-xs uppercase tracking-[0.18em] text-zinc-500">
+                          {label}
+                        </div>
+                        <div className="mt-3 text-sm leading-6 text-zinc-200">
+                          {value}
+                        </div>
+                      </a>
+                    );
+                  })}
                 </div>
 
                 {/* Mini stat cards */}
@@ -217,6 +266,31 @@ export default function Home() {
                           </li>
                         ))}
                       </ul>
+                      {project.links ? (
+                        <div className="mt-5 flex flex-wrap gap-2">
+                          {project.links.map((link) => {
+                            const isInternal = link.href.startsWith("/");
+                            const className =
+                              "rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-zinc-200 transition hover:border-indigo-400/30 hover:bg-white/4";
+
+                            return isInternal ? (
+                              <Link key={link.label} href={link.href} className={className}>
+                                {link.label}
+                              </Link>
+                            ) : (
+                              <a
+                                key={link.label}
+                                href={link.href}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={className}
+                              >
+                                {link.label}
+                              </a>
+                            );
+                          })}
+                        </div>
+                      ) : null}
                     </article>
                   ))}
                 </div>
@@ -351,6 +425,19 @@ export default function Home() {
                       </div>
                       <div className="mt-2 text-base text-white">
                         jackalxin
+                      </div>
+                    </a>
+                    <a
+                      className="rounded-2xl border border-white/8 bg-white/4 p-4 transition hover:border-indigo-400/30"
+                      href={profile.resume}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className="text-xs uppercase tracking-[0.18em] text-zinc-500">
+                        Resume PDF
+                      </div>
+                      <div className="mt-2 text-base text-white">
+                        Current industry-facing version
                       </div>
                     </a>
                     <Link
