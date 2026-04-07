@@ -241,7 +241,7 @@ export default function Home() {
               <SectionShell
                 id="work"
                 eyebrow="Selected work"
-                title="Projects that show technical depth and builder instinct"
+                title="Case studies that show how I attack hard technical problems"
               >
                 <div className="grid gap-5">
                   {featuredProjects.map((project) => (
@@ -249,23 +249,58 @@ export default function Home() {
                       key={project.title}
                       className="glass rounded-3xl p-6"
                     >
-                      <h3 className="text-xl font-semibold text-white">
-                        {project.title}
-                      </h3>
-                      <p className="mt-2 text-sm uppercase tracking-[0.18em] text-indigo-200">
-                        {project.tag}
-                      </p>
-                      <p className="mt-5 max-w-3xl text-base leading-7 text-zinc-300">
-                        {project.summary}
-                      </p>
-                      <ul className="mt-5 space-y-2 text-sm leading-7 text-zinc-400">
-                        {project.bullets.map((bullet) => (
-                          <li key={bullet} className="flex gap-3">
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-300" />
-                            <span>{bullet}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="flex flex-wrap items-start justify-between gap-3">
+                        <div>
+                          <h3 className="text-xl font-semibold text-white">
+                            {project.title}
+                          </h3>
+                          <p className="mt-2 text-sm uppercase tracking-[0.18em] text-indigo-200">
+                            {project.tag}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 grid gap-4 md:grid-cols-3">
+                        <div className="rounded-2xl border border-white/8 bg-white/4 p-4">
+                          <div className="text-[11px] uppercase tracking-[0.18em] text-zinc-500">
+                            Problem
+                          </div>
+                          <p className="mt-3 text-sm leading-7 text-zinc-300">
+                            {project.problem}
+                          </p>
+                        </div>
+                        <div className="rounded-2xl border border-white/8 bg-white/4 p-4">
+                          <div className="text-[11px] uppercase tracking-[0.18em] text-zinc-500">
+                            What I built
+                          </div>
+                          <p className="mt-3 text-sm leading-7 text-zinc-300">
+                            {project.built}
+                          </p>
+                        </div>
+                        <div className="rounded-2xl border border-white/8 bg-white/4 p-4">
+                          <div className="text-[11px] uppercase tracking-[0.18em] text-zinc-500">
+                            Why it matters
+                          </div>
+                          <p className="mt-3 text-sm leading-7 text-zinc-300">
+                            {project.impact}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-5 rounded-2xl border border-indigo-400/15 bg-indigo-500/5 p-4">
+                        <div className="text-[11px] uppercase tracking-[0.18em] text-indigo-200/80">
+                          Evidence
+                        </div>
+                        <ul className="mt-3 space-y-2 text-sm leading-7 text-zinc-300">
+                          {project.evidence.map((item) => (
+                            <li key={item} className="flex gap-3">
+                              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-300" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
                       {project.links ? (
                         <div className="mt-5 flex flex-wrap gap-2">
                           {project.links.map((link) => {

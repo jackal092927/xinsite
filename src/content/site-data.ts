@@ -15,11 +15,15 @@ export const featuredProjects = [
   {
     title: "Agent Systems & OpenClaw Workflows",
     tag: "Agents · Systems · Tooling",
-    summary:
-      "Designed and iterated on agent workflows, memory routing, and execution patterns for real AI assistants that need to do more than generate text.",
-    bullets: [
-      "Worked on orchestration patterns for tool use, long-context handling, task decomposition, and structured execution.",
-      "Explored coding-agent loops, subagent coordination, and ways to make agent behavior more observable and debuggable.",
+    problem:
+      "Most AI assistants are still fragile demos: weak tool orchestration, poor memory behavior, low observability, and not enough structure to survive real usage.",
+    built:
+      "Designed and iterated on agent workflows, memory routing, task decomposition, and execution patterns for assistants that need to actually do work instead of just answer nicely.",
+    impact:
+      "This is the layer that turns a model capability into product behavior: better reliability, better debugging, and better chances of surviving operational constraints.",
+    evidence: [
+      "Worked on orchestration patterns for tool use, long-context handling, and structured execution.",
+      "Explored coding-agent loops, subagent coordination, and more observable agent behavior.",
       "Focus: move from 'LLM demo' to durable product behavior with real operational constraints.",
     ],
     links: [
@@ -30,11 +34,15 @@ export const featuredProjects = [
   {
     title: "TopInG",
     tag: "ML · Graph Learning · Interpretability",
-    summary:
-      "Built an interpretable graph learning framework that makes model rationales more stable, inspectable, and resistant to spurious shortcuts.",
-    bullets: [
-      "Combined graph learning with persistent homology to identify stable rationale subgraphs instead of brittle post-hoc explanations.",
-      "Targeted a problem industry teams actually care about: when a model looks right, is it right for the right reason?",
+    problem:
+      "A model can look accurate while relying on the wrong signals. For high-stakes use, explanation quality and rationale stability matter almost as much as raw accuracy.",
+    built:
+      "Built an interpretable graph learning framework that uses persistent homology to surface stable rationale subgraphs instead of brittle post-hoc explanations.",
+    impact:
+      "Targets a practical trust problem industry teams care about: not just whether the model works, but whether it is right for the right reason.",
+    evidence: [
+      "Combined graph learning with persistent homology for rationale discovery.",
+      "Improved stability and interpretability under spurious-correlation pressure.",
       "Accepted to ICML 2025.",
     ],
     links: [
@@ -45,11 +53,15 @@ export const featuredProjects = [
   {
     title: "Neuc-MDS",
     tag: "Geometry · ML Theory · Representation",
-    summary:
-      "Reworked multidimensional scaling beyond Euclidean assumptions so difficult geometric structure can still be used instead of thrown away.",
-    bullets: [
-      "Generalized classical MDS with bilinear-form machinery for non-Euclidean and non-metric settings.",
-      "Turned a mathematically awkward case—negative eigenvalue information—into something usable for representation learning.",
+    problem:
+      "Classical dimensionality reduction throws away useful structure when the data geometry stops behaving nicely in Euclidean terms.",
+    built:
+      "Reworked multidimensional scaling beyond Euclidean assumptions with bilinear-form machinery so previously discarded negative-eigenvalue information could become usable.",
+    impact:
+      "Shows the kind of technical work I like: take an awkward theoretical limitation, then turn it into something that expands what representation-learning systems can do.",
+    evidence: [
+      "Generalized classical MDS for non-Euclidean and non-metric settings.",
+      "Converted difficult geometric structure into usable signal rather than wasted residue.",
       "Presented at NeurIPS 2024.",
     ],
     links: [
@@ -60,9 +72,13 @@ export const featuredProjects = [
   {
     title: "DL3DV-10K",
     tag: "3D Vision · Data · Benchmarking",
-    summary:
-      "Helped build a large-scale 3D vision dataset and benchmark designed for modern deep-learning pipelines, not toy academic setups.",
-    bullets: [
+    problem:
+      "Modern 3D vision systems need scale and realism, but many benchmarks are too small, too clean, or too detached from how deep-learning pipelines are actually used.",
+    built:
+      "Helped build a large-scale 3D vision dataset and benchmark for modern reconstruction and scene-understanding workflows.",
+    impact:
+      "Created infrastructure other teams can build on: better evaluation, harder real-world conditions, and a more serious benchmark surface for 3D learning systems.",
+    evidence: [
       "Dataset scale: 51.2M frames across 10,510 real-world videos.",
       "Supports benchmarking for NeRF, reconstruction, and broader 3D scene understanding workflows.",
       "Published at CVPR 2024.",
